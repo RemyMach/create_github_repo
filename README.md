@@ -8,7 +8,7 @@ pip install -r requirements.txt
 touch .env
 ```
 
-###.env file
+### .env file
 ```
 USERNAME_GITHUB="YourGithubUsername"
 PASSWORD_GITHUB="accessToken"
@@ -16,7 +16,7 @@ FILEPATH="FileWhereCreateEmptyLocalRepo"
 ```
 for accessToken look [tuto](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
 
-##Setup .bashrc or .zshrc to run a simple command from anywhere
+## Setup .bashrc or .zshrc to run a simple command from anywhere
 ```
 #.zshrc
 
@@ -32,7 +32,7 @@ alias create_repo_exist="/ProjectPath/create_repo/create_repo_existing_project.s
 - **With create_repo_existing_project.sh**
 - you can add a github repository with all the files in your working directory
 
-## Example
+## Examples
 - a new private github repo with the name newRepo and a local repo with the name newRepo
 ```
 create_repo -n newRepo -s private
