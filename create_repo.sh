@@ -20,7 +20,7 @@ SYSNOPSIS
 EOF
 
 }
-while getopts "n:s:l" opt
+while getopts "n:s:l:" opt
 do
     case $opt in
         n)
@@ -59,11 +59,11 @@ source $SCRIPTPATH/.env
 python3 $SCRIPTPATH/create_repo.py $name $FILEPATH $scope $licence
 echo "$USERNAME_GITHUB have create $FILEPATH$name local repo and use the https://github.com/$USERNAME_GITHUB/$name.git github repo"
 cd $FILEPATH$name
-git init
-git remote add origin https://github.com/$USERNAME_GITHUB/$name.git
 touch README.md
 echo "# $name" >> README.md
+git init
+git remote add origin https://github.com/$USERNAME_GITHUB/$name.git
 git add .
 git commit -m "Initial commit"
-git push -u origin master
+git push -u origin main
 code .

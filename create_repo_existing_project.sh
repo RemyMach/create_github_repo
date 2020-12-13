@@ -20,7 +20,7 @@ SYSNOPSIS
 EOF
 
 }
-while getopts "n:s:l" opt
+while getopts "n:s:l:" opt
 do
     case $opt in
         n)
